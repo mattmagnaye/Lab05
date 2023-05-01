@@ -1,5 +1,7 @@
 /**
  * The InsufficientFundsException is thrown when there are not enough funds in the account to withdraw a requested amount.
+ * @author Matt Magnaye
+ * @since 04/27/2023
  */
 public class InsufficientFundsException extends Exception {
     /**

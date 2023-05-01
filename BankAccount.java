@@ -1,6 +1,8 @@
 /**
  * The BankAccount class represents a bank account with an account number, balance, and transaction history.
  * It provides methods to deposit, withdraw, and print a statement, and getters and setters for the balance.
+ *  * @author Matt Magnaye
+ * @since 04/27/2023
  */
 public class BankAccount {
     private String accountNumber;
@@ -57,13 +59,20 @@ public class BankAccount {
         balance -= amount;
         transactionHistory.append("WITHDRAWAL: $").append(amount).append("\n");
     }
+    /**
+     * Prints the balance of the account.
+     */
+    public void printBalance() {
+        System.out.println("Balance for Account Number: " + accountNumber);
+        System.out.printf("Current Balance is: $%,.2f\n", balance);
+    }
 
     /**
      * Prints the transaction history of the account.
      */
     public void printStatement() {
         System.out.println("Account Number: " + accountNumber);
-        System.out.println("Balance: $" + balance);
+        System.out.printf("Balance: $%,.2f\n", balance);
         System.out.println("Transaction History:");
         System.out.println(transactionHistory);
     }
